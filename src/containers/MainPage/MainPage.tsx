@@ -8,6 +8,7 @@ import { Selector, SelectorItemType } from 'src/components/Selector/Selector';
 import { Input } from 'src/components/Input/Input';
 import { FieldContainer } from '../FieldContainer/FieldContainer';
 import { PersonalForm } from 'src/components/forms/PersonalForm/PersonalForm';
+import { Ticker } from 'src/components/Ticker/Ticker';
 
 type MainPageProps = {
     hideNavigation?: boolean;
@@ -125,8 +126,12 @@ export const MainPage: NextPage<MainPageProps> = ({
                         <div className={styles.content2}>
                             <h2>Курсы валют</h2>
                             {crosses &&
-                                crosses.map((cross) => (
-                                    <div key={cross.value}>123</div>
+                                crosses.map((cross, index) => (
+                                    <Ticker
+                                        key={cross.tickers.join('')}
+                                        cross={cross}
+                                        isOdd={Boolean(index % 2)}
+                                    />
                                 ))}
                         </div>
                     </div>
