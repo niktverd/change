@@ -1,4 +1,3 @@
-import type { NextPage } from 'next';
 import { PropsWithChildren, useCallback, useState } from 'react';
 import fromCurrencies from 'public/content/fromCurrencies.json';
 import toCurrencies from 'public/content/toCurrencies.json';
@@ -20,10 +19,7 @@ type MainPageProps = {
     hideNavigation?: boolean;
 } & PropsWithChildren;
 
-export const MainPage: NextPage<MainPageProps> = ({
-    hideNavigation = false,
-    children,
-}: MainPageProps) => {
+export const MainPage = ({ hideNavigation = false }: MainPageProps) => {
     const [fromCurrency, setFromCurrency] = useState<SelectorItemType['value']>(
         fromCurrencies[0].value
     );
