@@ -3,12 +3,16 @@ import { PropsWithChildren, useCallback, useState } from 'react';
 import fromCurrencies from 'public/content/fromCurrencies.json';
 import toCurrencies from 'public/content/toCurrencies.json';
 import crosses from 'public/content/crosses.json';
+import general from 'public/content/general.json';
 import styles from './MainPage.module.css';
+import navStyles from './Navigation.module.css';
 import { Selector, SelectorItemType } from 'src/components/Selector/Selector';
 import { Input } from 'src/components/Input/Input';
 import { FieldContainer } from '../FieldContainer/FieldContainer';
 import { PersonalForm } from 'src/components/forms/PersonalForm/PersonalForm';
 import { Ticker } from 'src/components/Ticker/Ticker';
+import { Image } from 'src/components/Image/Image';
+import clsx from 'clsx';
 
 type MainPageProps = {
     hideNavigation?: boolean;
@@ -65,7 +69,22 @@ export const MainPage: NextPage<MainPageProps> = ({
     return (
         <div className={styles.container}>
             {!hideNavigation && (
-                <div className={styles.navigation}>navigation</div>
+                <div className={clsx(navStyles.navigation)}>
+                    {general.logo && (
+                        <Image
+                            className={navStyles.logo}
+                            src={general.logo}
+                            width={64}
+                            height={64}
+                        />
+                    )}
+                    <div className={clsx(navStyles.content)}>
+                        <div className={clsx(navStyles.name)}>
+                            {general.name}
+                        </div>
+                        <div className={clsx(navStyles.tag)}>{general.tag}</div>
+                    </div>
+                </div>
             )}
             <div className={styles.content}>
                 <div className={styles.layout}>

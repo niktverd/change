@@ -13,16 +13,6 @@
     padding: 10px;
 }
 
-.navigation {
-    width: 100%;
-    height: 64px;
-
-    padding: 10px;
-
-    color: #FFF;
-    background-color: rgb(44 42 56 / 80%);
-}
-
 .layout {
     display: flex;
     flex-direction: row;
