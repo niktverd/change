@@ -1,0 +1,19 @@
+.container {
+    width: 100%;
+    padding: var(--md) var(--x2s);
+
+    color: var(--main-color);
+
+    border: none;
+    outline-width: 0;
+    background-color: rgb(255 255 255 / 5%);
+}
+
+.container:focus {
+    outline: none;
+}
+
+.container:focus-visible {
+    border: none;
+    outline-width: 0;
+}

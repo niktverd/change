@@ -1,0 +1,9 @@
+.container {
+    padding: var(--xs);
+}
+
+.inner {
+    overflow: hidden;
+
+    border-radius: var(--border-radius-lg);
+}

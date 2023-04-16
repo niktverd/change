@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    padding: 8px 0;
+}
+
+.fields {
+    display: flex;
+    flex-direction: row;
+
+    width: 100%;
+    padding: 8px 0;
+}
+
+@media (max-width: 1400px) {
+    .fields {
+        flex-direction: column;
+    }
+}

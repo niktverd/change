@@ -1,0 +1,24 @@
+.container {
+    width: 100vw;
+    min-width: 400px;
+    min-height: 100vh;
+
+    color: #FFF;
+
+    background-color: #424454;
+}
+
+.content {
+    width: 100%;
+    padding: 10px;
+}
+
+.navigation {
+    width: 100%;
+    height: 64px;
+
+    padding: 10px;
+
+    color: #FFF;
+    background-color: rgb(44 42 56 / 80%);
+}

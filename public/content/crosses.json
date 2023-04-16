@@ -1,0 +1,4 @@
+[
+    {"tickers": ["BTC", "USDT"], "value": 30100},
+    {"tickers": ["BTC", "ETH"], "value": 8000}
+]
