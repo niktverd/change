@@ -4,9 +4,10 @@
     flex-direction: row;
 
     width: 100%;
-    padding: 8px;
+    padding: var(--x2s);
 
     border-bottom: 1px solid var(--splitter-color);
+    background-color: var(--backgroun-color-underlay-active-element);
 }
 
 .container:hover {
@@ -20,7 +21,7 @@
 }
 
 .icon {
-    margin-right: 32px;
+    margin-right: var(--lg);
 }
 
 .content {

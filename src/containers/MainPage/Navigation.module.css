@@ -12,8 +12,8 @@
     justify-content: center;
 
     width: 100%;
-    height: 64px;
-    padding: 10px;
+    height: var(--x3l);
+    padding: var(--xs);
 
     color: #FFF;
 }

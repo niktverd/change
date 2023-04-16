@@ -1,0 +1,35 @@
+.text-heading-1 {
+    font-size: var(--text-size-h1);
+
+    font-weight: var(--font-weight-bold-1);
+}
+
+.text-heading-2 {
+    font-size: var(--text-size-h2);
+
+    font-weight: var(--font-weight-bold-2);
+}
+
+.text-heading-3 {
+    font-size: var(--text-size-h3);
+
+    font-weight: var(--font-weight-bold-3);
+}
+
+.text-body-1 {
+    font-size: var(--text-size-body1);
+
+    font-weight: var(--font-weight-bold-2);
+}
+
+.text-body-2 {
+    font-size: var(--text-size-body2);
+
+    font-weight: var(--font-weight-bold-3);
+}
+
+.text-body-3 {
+    font-size: var(--text-size-body3);
+
+    font-weight: var(--font-weight-bold-4);
+}

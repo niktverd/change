@@ -45,12 +45,27 @@ a {
     --contrast-color: #000;
 }
 
+/* font-sizes */
+* {
+    --text-size-h1: 42px;
+    --text-size-h2: 24px;
+    --text-size-h3: 16px;
+    --text-size-body1: 23px;
+    --text-size-body2: 17px;
+    --text-size-body3: 13px;
+    --font-weight-bold-1: 900;
+    --font-weight-bold-2: 700;
+    --font-weight-bold-3: 500;
+    --font-weight-bold-4: 300;
+}
+
 /* backgrounds */
 * {
     --splitter-color: rgb(124 124 124 / 10%);
     --hover-background-color: rgb(0 0 0 / 30%);
     --background-color: #424454;
     --background-color-contrast: rgb(255 255 0);
+    --backgroun-color-underlay-active-element: rgb(255 255 255 / 5%);
 }
 
 /* border-radius */

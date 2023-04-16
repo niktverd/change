@@ -20,11 +20,11 @@
 }
 
 .name {
-    font-size: 48px;
-    font-weight: 900;
+    /* stylelint-disable-next-line property-no-unknown */
+    composes: text-heading-1 from "styles/shared.css";
 }
 
 .tag {
-    font-size: 24px;
-    font-weight: 400;
+    /* stylelint-disable-next-line property-no-unknown */
+    composes: text-heading-2 from "styles/shared.css";
 }
