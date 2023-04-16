@@ -6,6 +6,7 @@ import crosses from 'public/content/crosses.json';
 import general from 'public/content/general.json';
 import styles from './MainPage.module.css';
 import navStyles from './Navigation.module.css';
+import footStyles from './Footer.module.css';
 import { Selector, SelectorItemType } from 'src/components/Selector/Selector';
 import { Input } from 'src/components/Input/Input';
 import { FieldContainer } from '../FieldContainer/FieldContainer';
@@ -162,11 +163,32 @@ export const MainPage: NextPage<MainPageProps> = ({
                 </div>
 
                 <div className={styles.content2}>ADVANTAGES</div>
-                <div className={styles.content2} style={{ height: 5000 }}>
-                    FOOTER
-                </div>
-                <div className={styles.content2}>{children}</div>
             </MainLayout>
+            <div className={clsx(footStyles.container)}>
+                <MainLayout innerClassName={clsx(footStyles.layout)}>
+                    <div>
+                        <Image
+                            className={clsx(footStyles.logo)}
+                            src={general.logo}
+                            width={128}
+                            height={128}
+                        />
+                        <div className={clsx(footStyles.name)}>
+                            {general.name}
+                        </div>
+                        <div className={clsx(footStyles.tag)}>
+                            {general.tag}
+                        </div>
+                    </div>
+                    <div>
+                        <div>Курсы валют</div>
+                        <div>Авторизоваться</div>
+                        <div>Войти</div>
+                        <div>Политика</div>
+                    </div>
+                    <div>contacts</div>
+                </MainLayout>
+            </div>
         </div>
     );
 };
