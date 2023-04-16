@@ -93,13 +93,14 @@ export const MainPage = ({ hideNavigation = false }: MainPageProps) => {
                     <div className={styles.left}>
                         <div className={styles.content2}>
                             <div>
-                                <h2>Отдаете</h2>
+                                <h2>Отдаёте</h2>
                                 <FieldContainer>
                                     <Selector
                                         selectedItem={fromCurrency}
                                         items={fromCurrencies}
                                         popupTitle="Валюта"
                                         onClick={handleSelectFromCurrency}
+                                        arrow={true}
                                     />
                                 </FieldContainer>
                                 <FieldContainer>
@@ -124,6 +125,7 @@ export const MainPage = ({ hideNavigation = false }: MainPageProps) => {
                                         items={toCurrencies}
                                         popupTitle="Валюта"
                                         onClick={handleSelectToCurrency}
+                                        arrow={true}
                                     />
                                 </FieldContainer>
                                 <FieldContainer>

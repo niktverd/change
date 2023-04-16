@@ -1,9 +1,9 @@
 import { useCallback, useEffect, useState } from 'react';
 import { Xmark } from '@gravity-ui/icons';
 import { Magnifier } from '@gravity-ui/icons';
+import { CaretDown } from '@gravity-ui/icons';
 import { Input } from '../Input/Input';
 import { Image } from '../Image/Image';
-
 import styles from './Selector.module.css';
 import itemStyles from './SelectorItem.module.css';
 import clsx from 'clsx';
@@ -15,12 +15,14 @@ export type SelectorItemType = {
     value: string | number;
     icon?: string;
     subtitle?: string;
+    arrow?: boolean;
 };
 
 type SelectorProps = {
     selectedItem?: SelectorItemType['value'];
     items?: SelectorItemType[];
     popupTitle?: string;
+    arrow?: boolean;
 };
 
 type SelectorItemHandler = {
@@ -28,7 +30,7 @@ type SelectorItemHandler = {
 };
 
 const SelectorItem = (props: SelectorItemType & SelectorItemHandler) => {
-    const { icon, value, title, subtitle, onClick } = props;
+    const { icon, value, title, subtitle, onClick, arrow = false } = props;
     return (
         <div className={itemStyles.container} onClick={() => onClick?.(value)}>
             {icon && (
@@ -42,6 +44,13 @@ const SelectorItem = (props: SelectorItemType & SelectorItemHandler) => {
                     <div className={clsx(itemStyles.subtitle)}>{subtitle}</div>
                 )}
             </div>
+            {arrow && (
+                <CaretDown
+                    className={clsx(itemStyles.arrow)}
+                    width={64}
+                    height={24}
+                />
+            )}
         </div>
     );
 };
@@ -51,6 +60,7 @@ export const Selector = ({
     items = [],
     popupTitle,
     onClick,
+    arrow = false,
 }: SelectorProps & SelectorItemHandler) => {
     const [selected, setSelected] = useState<SelectorItemType | null>(null);
     const [showList, setShowList] = useState<boolean>(false);
@@ -81,7 +91,7 @@ export const Selector = ({
     return (
         <div className={styles.container}>
             <div className={styles.button} onClick={onShowList}>
-                {selected ? <SelectorItem {...selected} /> : '-'}
+                {selected ? <SelectorItem {...selected} arrow={arrow} /> : '-'}
             </div>
             {showList && (
                 <div className={styles.items} onClick={onHideList}>

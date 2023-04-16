@@ -61,11 +61,11 @@ a {
 
 /* backgrounds */
 * {
-    --splitter-color: rgb(124 124 124 / 10%);
-    --hover-background-color: rgb(0 0 0 / 30%);
     --background-color: #424454;
     --background-color-contrast: rgb(255 255 0);
+    --hover-background-color: rgb(0 0 0 / 30%);
     --backgroun-color-underlay-active-element: rgb(255 255 255 / 5%);
+    --splitter-color: rgb(124 124 124 / 10%);
 }
 
 /* border-radius */

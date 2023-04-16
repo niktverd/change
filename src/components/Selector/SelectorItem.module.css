@@ -22,6 +22,9 @@
 
 .icon {
     margin-right: var(--lg);
+    padding: var(--xs);
+
+    background-color: var(--background-color-contrast);
 }
 
 .content {
@@ -34,4 +37,8 @@
 
 .subtitle {
     color: var(--secondary-color);
+}
+
+.arrow {
+    color: var(--background-color-contrast);
 }
