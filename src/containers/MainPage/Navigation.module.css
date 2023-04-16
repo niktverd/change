@@ -1,4 +1,10 @@
 .navigation {
+    padding: var(--xs);
+
+    background-color: rgb(44 42 56 / 80%);
+}
+
+.layout {
     display: flex;
     overflow: hidden;
     align-items: center;
@@ -10,7 +16,6 @@
     padding: 10px;
 
     color: #FFF;
-    background-color: rgb(44 42 56 / 80%);
 }
 
 .logo {

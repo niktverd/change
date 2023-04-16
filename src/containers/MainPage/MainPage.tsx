@@ -13,6 +13,7 @@ import { PersonalForm } from 'src/components/forms/PersonalForm/PersonalForm';
 import { Ticker } from 'src/components/Ticker/Ticker';
 import { Image } from 'src/components/Image/Image';
 import clsx from 'clsx';
+import { MainLayout } from '../MainLayout/MainLayout';
 
 type MainPageProps = {
     hideNavigation?: boolean;
@@ -70,23 +71,27 @@ export const MainPage: NextPage<MainPageProps> = ({
         <div className={styles.container}>
             {!hideNavigation && (
                 <div className={clsx(navStyles.navigation)}>
-                    {general.logo && (
-                        <Image
-                            className={navStyles.logo}
-                            src={general.logo}
-                            width={64}
-                            height={64}
-                        />
-                    )}
-                    <div className={clsx(navStyles.content)}>
-                        <div className={clsx(navStyles.name)}>
-                            {general.name}
+                    <MainLayout innerClassName={clsx(navStyles.layout)}>
+                        {general.logo && (
+                            <Image
+                                className={navStyles.logo}
+                                src={general.logo}
+                                width={64}
+                                height={64}
+                            />
+                        )}
+                        <div className={clsx(navStyles.content)}>
+                            <div className={clsx(navStyles.name)}>
+                                {general.name}
+                            </div>
+                            <div className={clsx(navStyles.tag)}>
+                                {general.tag}
+                            </div>
                         </div>
-                        <div className={clsx(navStyles.tag)}>{general.tag}</div>
-                    </div>
+                    </MainLayout>
                 </div>
             )}
-            <div className={styles.content}>
+            <MainLayout innerClassName={styles.content}>
                 <div className={styles.layout}>
                     <div className={styles.left}>
                         <div className={styles.content2}>
@@ -161,7 +166,7 @@ export const MainPage: NextPage<MainPageProps> = ({
                     FOOTER
                 </div>
                 <div className={styles.content2}>{children}</div>
-            </div>
+            </MainLayout>
         </div>
     );
 };
